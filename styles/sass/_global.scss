@@ -1,0 +1,18 @@
+.wrapper {
+    width: 85%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+// update this code with mixins, variables, etc
+fieldset {
+    border: 5px black solid;
+    margin: 10px;
+    padding: 30px;
+}
+
+.submit {
+    margin: 50px auto;
+    padding: 10px;
+    display: block;
+}
