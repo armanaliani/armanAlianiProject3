@@ -6,34 +6,6 @@ $(function(event){
     $('a').smoothScroll();
     event.preventDefault();
 })
-// add smooth scroll to non 'a' buttons
-
-// make hard refresh go to top of page
-
-
-// give values to answers
-// catOrDog.questions = {
-//     firstQuestion: {
-//         firstAnswerValue: 3,
-//         secondAnswerValue: 1,
-//         thirdAnswerValue: -1,
-//         fourthAnswerValue: -3,
-//     },
-//     secondQuestion: {
-//         firstAnswerValue: 3,
-//         secondAnswerValue: 1, 
-//         thirdAnswerValue: -1, 
-//         fourthAnswerValue: -3, 
-//     },
-//     thirdQuestion: {
-//         firstAnswerValue: 3, 
-//         secondAnswerValue: 1, 
-//         thirdAnswerValue: -1,
-//         fourthAnswerValue: -3,
-//     }
-// }
-
-// console.log(catOrDog.questions);
 
 // wrap this in doc ready
 
@@ -47,8 +19,11 @@ $('form').on('submit', function(event) {
     console.log(catOrDog.questionTwoAnswer);
     catOrDog.questionThreeAnswer = $('input[name=questionThreeOptions]:checked').val()
     console.log(catOrDog.questionThreeAnswer);
+    catOrDog.questionFourAnswer = $('input[name=questionFourOptions]:checked').val()
+    console.log(catOrDog.questionFourAnswer);
+    catOrDog.questionFiveAnswer = $('input[name=questionFiveOptions]:checked').val()
+    console.log(catOrDog.questionFiveAnswer);
 
-// Create error control for a blank answer//////////////////////
 // -------------------------------------------------------
     
     // transfrom string value into real number 
@@ -58,23 +33,37 @@ $('form').on('submit', function(event) {
     console.log(catOrDog.twoValue);
     catOrDog.threeValue = Number(catOrDog.questionThreeAnswer);
     console.log(catOrDog.threeValue);
+    catOrDog.fourValue = Number(catOrDog.questionFourAnswer);
+    console.log(catOrDog.fourValue);
+    catOrDog.fiveValue = Number(catOrDog.questionFiveAnswer);
+    console.log(catOrDog.fiveValue);
 
     // calculate users score
-    catOrDog.finalResult = (catOrDog.oneValue + catOrDog.twoValue + catOrDog.threeValue);
+    catOrDog.finalResult = (catOrDog.oneValue + catOrDog.twoValue + catOrDog.threeValue + catOrDog.fourValue + catOrDog.fiveValue);
     console.log(catOrDog.finalResult);
 
     // display user result based on result
     if (catOrDog.finalResult > 0) {
         // display cat result
-        $('.result').html(`<p class="userAnswer">get a cat</p>`);
+        $('.result').html(`
+        <div class="userAnswer">
+            <img src="./assets/project3ImageCatResult.jpg" alt="a sleeping cat">
+            <h2>get a cat</h2>
+            <p>Cats are calm and independent creatures. They require minimal attention or training and can easily be entertained with the simplest objects. Cats are more suited to indoor spaces and don't need much space to make themselves comfortable.</p>
+        </div>
+        `);
         window.location = "#answer";
-    } else if (catOrDog.finalResult != catOrDog.oneValue + catOrDog.twoValue + catOrDog.threeValue) {
+    } else if (catOrDog.finalResult != catOrDog.oneValue + catOrDog.twoValue + catOrDog.threeValue + catOrDog.fourValue + catOrDog.fiveValue) {
         $('.result').html(`<p class="resultError">Please fill out all the questions</p>`);
         window.location = "#answer";
     } else {
         // display dog result
         $('.result').html(`
-        <p class="userAnswer">get a dog</p>
+        <div class="userAnswer">
+            <img src="./assets/project3ImageDogResult.jpg" alt="a sleeping dog">
+            <h2 class="userAnswer">get a dog</h2>
+            <p>Dogs are loyal and adventure loving creatures. They’re quite dependant and require more attention and training than cats but will always want your love and attention. Dogs love the outdoors and staying active and therefore will need plenty of space to run around.</p>
+        </div>
         `);
         window.location = "#answer";
         // <a href="#formStart">Take it again</a>

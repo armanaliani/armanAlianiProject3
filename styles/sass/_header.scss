@@ -1,1 +1,25 @@
 // header styles
+
+header {
+    height: 100vh;
+    text-align: center;
+    background-image: url(../assets/project3HeaderBackground.jpg);
+    background-size: cover;
+    width: 100%;
+    padding-top: 100px;
+    background-position: bottom;
+}
+
+h1 {
+    font-size: 5rem;
+}
+.spanCat {
+    border-bottom: 15px $blueLight solid;
+}
+.spanDog {
+    border-top: 15px $redLight solid;
+}
+
+header h2 {
+    font-size: 1.2rem;
+}

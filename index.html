@@ -21,25 +21,23 @@
         <div class="wrapper">
             <form action="" id="formStart">
                 <fieldset>
-                    <!-- optimize input and label values and attributes for css and js -->
-                    <!-- add a button at the end of each fieldset to proceed to next question -->
                     <div class="choices">
                         <h3>The heart wants what the heart wants, Dog person or a Cat person?</h3>
                         <div class="optionsDiv">
                             <!-- increase clickable area for radio button -->
-                            <input type="radio" name="questionOneOptions" value="3" id="qOneOptionOne">
-                            <label for="qOneOptionOne">Cat person for sure</label>
+                            <input type="radio" name="questionOneOptions" value="3" id="qOneOptionOne" class="radButton">
+                            <label  for="qOneOptionOne">Cat person for sure</label>
                         </div>
                         <div class="optionsDiv">
-                            <input type="radio" name="questionOneOptions" value="1" id="qOneOptionTwo">
+                            <input type="radio" name="questionOneOptions" value="1" id="qOneOptionTwo" class="radButton">
                             <label for="qOneOptionTwo">Not sure, but leaning towards cats</label>
                         </div>
                         <div class="optionsDiv">
-                            <input type="radio" name="questionOneOptions" value="-1" id="qOneOptionThree">
+                            <input type="radio" name="questionOneOptions" value="-1" id="qOneOptionThree" class="radButton">
                             <label for="qOneOptionThree">Not sure, but leaning towards dogs</label>
                         </div>
                         <div class="optionsDiv">
-                            <input type="radio" name="questionOneOptions" value="-3" id="qOneOptionFour">
+                            <input type="radio" name="questionOneOptions" value="-3" id="qOneOptionFour" class="radButton">
                             <label for="qOneOptionFour">Dog person for sure</label>
                         </div>
                         <div>
@@ -47,7 +45,7 @@
                         </div>
                     </div>
                     <div class="imgDiv">
-                        <img src="assets/project3ImageQuestionOneImgColour.jpg" alt="placeholder img">
+                        <img src="assets/project3ImageQuestionOneImgColour.jpg" alt="a blue cat and red dog beside eachother">
                     </div>
                     <!-- how to make the whole sentace selectable -->
                 </fieldset>
@@ -55,19 +53,19 @@
                     <div class="choices">
                         <h3>I want a pet that...</h3>
                         <div class="optionsDiv">
-                            <input type="radio" name="questionTwoOptions" value="3" id="qTwoOptionOne">
+                            <input type="radio" name="questionTwoOptions" value="3" id="qTwoOptionOne" class="radButton">
                             <label for="qTwoOptionOne">Is clean, calm, quiet, and independant</label>
                         </div>
                         <div class="optionsDiv">
-                            <input type="radio" name="questionTwoOptions" value="1" id="qTwoOptionTwo">
+                            <input type="radio" name="questionTwoOptions" value="1" id="qTwoOptionTwo" class="radButton">
                             <label for="qTwoOptionTwo">Wants my love and attention when the moods right</label>
                         </div>
                         <div class="optionsDiv">
-                            <input type="radio" name="questionTwoOptions" value="-1" id="qTwoOptionThree">
+                            <input type="radio" name="questionTwoOptions" value="-1" id="qTwoOptionThree" class="radButton">
                             <label for="qTwoOptionThree">Always wants my love and attention</label>
                         </div>
                         <div class="optionsDiv">
-                            <input type="radio" name="questionTwoOptions" value="-3" id="qTwoOptionFour">
+                            <input type="radio" name="questionTwoOptions" value="-3" id="qTwoOptionFour" class="radButton">
                             <label for="qTwoOptionFour">Is full of energy and seeks adventure</label>
                         </div>
                         <div>
@@ -75,34 +73,88 @@
                         </div>
                     </div>
                     <div>
-                        <img src="assets/project3ImageQuestionTwoImgColour.jpg" alt="placeholder img">
+                        <img src="assets/project3ImageQuestionTwoImgColour.jpg" alt="a person thinking about their future pet">
                     </div>
                 </fieldset>
                 <fieldset>
                     <div class="choices" id="questionThree">
                         <h3>How much free time do you have on a consistent basis</h3>
                         <div class="optionsDiv">
-                            <input type="radio" id="qThreeOptionOne" name="questionThreeOptions" value="3">
+                            <input type="radio" id="qThreeOptionOne" name="questionThreeOptions" value="3" class="radButton">
                             <label for="qThreeOptionOne">Extremely busy, minimal free time</label>
                         </div>
                         <div class="optionsDiv">
-                            <input type="radio" name="questionThreeOptions" value="1" id="qThreeOptionTwo">
+                            <input type="radio" name="questionThreeOptions" value="1" id="qThreeOptionTwo" class="radButton">
                             <label for="qThreeOptionTwo">Really busy, but a bit of free time here and there</label>
                         </div>
                         <div class="optionsDiv">
-                            <input type="radio" name="questionThreeOptions" value="-1" id="qThreeOptionThree">
+                            <input type="radio" name="questionThreeOptions" value="-1" id="qThreeOptionThree" class="radButton">
                             <label for="qThreeOptionThree">Busy but I have a good amount of free time</label>
                         </div>
                         <div class="optionsDiv">
-                            <input type="radio" name="questionThreeOptions" value="-3" id="qThreeOptionFour">
+                            <input type="radio" name="questionThreeOptions" value="-3" id="qThreeOptionFour" class="radButton">
                             <label for="qThreeOptionFour">Not busy at all</label>
+                        </div>
+                        <div>
+                            <a href="#questionFour">next</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="assets/project3ImageQuestionThreeImg.jpg" alt="a dog patiently waiting for their owner to finish working">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="choices" id="questionFour">
+                        <h3>How much space does your home have?</h3>
+                        <div class="optionsDiv">
+                            <input type="radio" id="qFourOptionOne" name="questionFourOptions" value="3" class="radButton">
+                            <label for="qFourOptionOne">smaller condo/apartment under 700sq ft</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionFourOptions" value="1" id="qFourOptionTwo" class="radButton">
+                            <label for="qFourOptionTwo">fair amount of space, under 1700sq ft</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionFourOptions" value="-1" id="qFourOptionThree" class="radButton">
+                            <label for="qFourOptionThree">good amount of space, 1700sq ft +</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionFourOptions" value="-3" id="qFourOptionFour" class="radButton">
+                            <label for="qFourOptionFour">tons of space, a big backyard too, 3500sq ft +</label>
+                        </div>
+                        <div>
+                            <a href="#questionFive">next</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="assets/project3ImageQuestionFourImgColour.jpg" alt="a dog and cat sitting on a couch">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="choices" id="questionFive">
+                        <h3>How much can you afford to spend on your pet annually?</h3>
+                        <div class="optionsDiv">
+                            <input type="radio" id="qFiveOptionOne" name="questionFiveOptions" value="3" class="radButton">
+                            <label for="qFiveOptionOne">$750 + annually</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionFiveOptions" value="1" id="qFiveOptionTwo" class="radButton">
+                            <label for="qFiveOptionTwo">$1000 + annually</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionFiveOptions" value="-1" id="qFiveOptionThree" class="radButton">
+                            <label for="qFiveOptionThree">$1500 + annually</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionFiveOptions" value="-3" id="qFiveOptionFour" class="radButton">
+                            <label for="qFiveOptionFour">$2500 + annually</label>
                         </div>
                         <div>
                             <a href="#resultsButton">next</a>
                         </div>
                     </div>
                     <div>
-                        <img src="assets/project3ImageQuestionThreeImg.jpg" alt="placeholder img">
+                        <img src="assets/project3ImageQuestionFiveImgColour.jpg" alt="food bowl and bag of pet food">
                     </div>
                 </fieldset>
                 <div class="submitSection"> 

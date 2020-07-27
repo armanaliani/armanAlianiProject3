@@ -1,1 +1,11 @@
 // footer styles
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer p {
+    font-size: 1rem;
+    margin-top: 33px;
+}
