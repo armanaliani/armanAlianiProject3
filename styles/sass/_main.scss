@@ -20,6 +20,8 @@ img {
     border-radius: 5px;
     position: relative;
     right: 0;
+}
+fieldset img {
     margin-left: 20px;
 }
 label {
@@ -98,4 +100,3 @@ input:focus{
     font-weight: 700;
     background-color: $background;
 }
-// media queries

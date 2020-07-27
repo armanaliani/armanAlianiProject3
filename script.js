@@ -7,8 +7,8 @@ $(function(event){
     event.preventDefault();
 })
 
-// wrap this in doc ready
-
+// doc ready
+$(function(){
 // get user input
 $('form').on('submit', function(event) {
     event.preventDefault();
@@ -66,9 +66,6 @@ $('form').on('submit', function(event) {
         </div>
         `);
         window.location = "#answer";
-        // <a href="#formStart">Take it again</a>
-        // add above code to html on submit, configure to reset quiz when clicked
     }
-
-
-})
+});
+});
