@@ -5,115 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat or Dog</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <!-- link font awesome or google fonts or any other assets -->
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&display=swap" rel="stylesheet">  
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="wrapper">
-            <h1>should i get a <span>cat or dog</span></h1>
-            <button>take the quiz</button> <!--takes user to first question-->
+            <h2>what pet should I get</h2>
+            <h1><span class="spanCat">Cat</span> or <span class="spanDog">Dog</span></h1>
+            <a href="#formStart">take the quiz</a> <!--takes user to first question-->
             <!-- img in this section will likely be background imgs -->
         </div>
     </header>
 
     <main>
         <div class="wrapper">
-            <form action="">
+            <form action="" id="formStart">
                 <fieldset>
                     <!-- optimize input and label values and attributes for css and js -->
                     <!-- add a button at the end of each fieldset to proceed to next question -->
-                    <div>
-                        <p>Question 1</p>
-                        <div>
+                    <div class="choices">
+                        <h3>The heart wants what the heart wants, Dog person or a Cat person?</h3>
+                        <div class="optionsDiv">
                             <!-- increase clickable area for radio button -->
-                            <input type="radio" name="questionOneOptions" value="3">
-                            <label>option 1</label>
+                            <input type="radio" name="questionOneOptions" value="3" id="qOneOptionOne">
+                            <label for="qOneOptionOne">Cat person for sure</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionOneOptions" value="1" id="qOneOptionTwo">
+                            <label for="qOneOptionTwo">Not sure, but leaning towards cats</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionOneOptions" value="-1" id="qOneOptionThree">
+                            <label for="qOneOptionThree">Not sure, but leaning towards dogs</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionOneOptions" value="-3" id="qOneOptionFour">
+                            <label for="qOneOptionFour">Dog person for sure</label>
                         </div>
                         <div>
-                            <input type="radio" name="questionOneOptions" value="1">
-                            <label>option 2</label>
+                            <a href="#questionTwo">next</a>
+                        </div>
+                    </div>
+                    <div class="imgDiv">
+                        <img src="assets/project3ImageQuestionOneImgColour.jpg" alt="placeholder img">
+                    </div>
+                    <!-- how to make the whole sentace selectable -->
+                </fieldset>
+                <fieldset id="questionTwo">
+                    <div class="choices">
+                        <h3>I want a pet that...</h3>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionTwoOptions" value="3" id="qTwoOptionOne">
+                            <label for="qTwoOptionOne">Is clean, calm, quiet, and independant</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionTwoOptions" value="1" id="qTwoOptionTwo">
+                            <label for="qTwoOptionTwo">Wants my love and attention when the moods right</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionTwoOptions" value="-1" id="qTwoOptionThree">
+                            <label for="qTwoOptionThree">Always wants my love and attention</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionTwoOptions" value="-3" id="qTwoOptionFour">
+                            <label for="qTwoOptionFour">Is full of energy and seeks adventure</label>
                         </div>
                         <div>
-                            <input type="radio" name="questionOneOptions" value="-1">
-                            <label">option 3</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questionOneOptions" value="-3">
-                            <label">option 4</label>
+                            <a href="#questionThree">next</a>
                         </div>
                     </div>
                     <div>
-                        <!-- <img src="" alt=""> -->
-                        <!-- <img src="" alt=""> -->
+                        <img src="assets/project3ImageQuestionTwoImgColour.jpg" alt="placeholder img">
                     </div>
-                    <!-- could also do checkbox input type but limit to one -->
                 </fieldset>
                 <fieldset>
-                    <div>
-                        <p>Question 2</p>
-                        <div>
-                            <input type="radio" name="questionTwoOptions" value="3">
-                            <label>option 1</label>
+                    <div class="choices" id="questionThree">
+                        <h3>How much free time do you have on a consistent basis</h3>
+                        <div class="optionsDiv">
+                            <input type="radio" id="qThreeOptionOne" name="questionThreeOptions" value="3">
+                            <label for="qThreeOptionOne">Extremely busy, minimal free time</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionThreeOptions" value="1" id="qThreeOptionTwo">
+                            <label for="qThreeOptionTwo">Really busy, but a bit of free time here and there</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionThreeOptions" value="-1" id="qThreeOptionThree">
+                            <label for="qThreeOptionThree">Busy but I have a good amount of free time</label>
+                        </div>
+                        <div class="optionsDiv">
+                            <input type="radio" name="questionThreeOptions" value="-3" id="qThreeOptionFour">
+                            <label for="qThreeOptionFour">Not busy at all</label>
                         </div>
                         <div>
-                            <input type="radio" name="questionTwoOptions" value="1">
-                            <label>option 2</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questionTwoOptions" value="-1">
-                            <label>option 3</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questionTwoOptions" value="-3">
-                            <label>option 4</label>
-                        </div>
-                    </div>
-                    <div>
-                        <!-- <img src="" alt=""> -->
-                        <!-- <img src="" alt=""> -->
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <div>
-                        <p>Question 3</p>
-                        <div>
-                            <input type="radio" name="questionThreeOptions" value="3">
-                            <label>option 1</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questionThreeOptions" value="1">
-                            <label>option 2</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questionThreeOptions" value="-1">
-                            <label>option 3</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="questionThreeOptions" value="-3">
-                            <label>option 4</label>
+                            <a href="#resultsButton">next</a>
                         </div>
                     </div>
                     <div>
-                        <!-- <img src="" alt=""> -->
-                        <!-- <img src="" alt=""> -->
+                        <img src="assets/project3ImageQuestionThreeImg.jpg" alt="placeholder img">
                     </div>
                 </fieldset>
-                <div> 
-                    <input class="submit" type="submit" value="see my results">
+                <div class="submitSection"> 
+                    <img class="resultsImg" src="assets/project3ImageResultsSection.jpg" alt="cat and dog chilling side by side waiting for the results of the quiz">
+                    <input class="submit" type="submit" value="see my results" id="resultsButton">
                     <!-- note to optimize call to action text, current is sample -->
                 </div>
             </form>
+            <section class="result" id="answer">
+                <!-- display answer here through js -->
+            </section>
         </div>
     </main>
 
-    <footer>
-        <!-- back to top button? -->
-        <!-- copyrights n shit "Arman Aliani" -->
+    <footer class="wrapper">
+        <a href="#header">back to top</a>
+        <p>Created by Arman Aliani 2020</p>
     </footer>
 
 
     
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script src="script.js"></script>
     
 </body>

@@ -1,6 +1,16 @@
 // namespace
 const catOrDog = {};
 
+// smoothscroll
+$(function(event){
+    $('a').smoothScroll();
+    event.preventDefault();
+})
+// add smooth scroll to non 'a' buttons
+
+// make hard refresh go to top of page
+
+
 // give values to answers
 // catOrDog.questions = {
 //     firstQuestion: {
@@ -52,6 +62,24 @@ $('form').on('submit', function(event) {
     // calculate users score
     catOrDog.finalResult = (catOrDog.oneValue + catOrDog.twoValue + catOrDog.threeValue);
     console.log(catOrDog.finalResult);
-    
+
+    // display user result based on result
+    if (catOrDog.finalResult > 0) {
+        // display cat result
+        $('.result').html(`<p class="userAnswer">get a cat</p>`);
+        window.location = "#answer";
+    } else if (catOrDog.finalResult != catOrDog.oneValue + catOrDog.twoValue + catOrDog.threeValue) {
+        $('.result').html(`<p class="resultError">Please fill out all the questions</p>`);
+        window.location = "#answer";
+    } else {
+        // display dog result
+        $('.result').html(`
+        <p class="userAnswer">get a dog</p>
+        `);
+        window.location = "#answer";
+        // <a href="#formStart">Take it again</a>
+        // add above code to html on submit, configure to reset quiz when clicked
+    }
+
+
 })
-// displat user result based on result
