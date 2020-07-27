@@ -1,1 +1,101 @@
 // main section styles
+// form question stylings
+fieldset {
+    border: 10px $primary solid;
+    border-radius: 5px;
+    margin: 200px auto;
+    padding: 50px 30px;
+    display: flex;
+}
+.choices {
+    width: 55%;
+}
+img {
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+    max-height: 400px;
+    min-height: 200px;
+    border: 10px $primary solid;
+    border-radius: 5px;
+    position: relative;
+    right: 0;
+    margin-left: 20px;
+}
+label {
+    font-size: 1.3rem;
+}
+label:hover,
+input:focus{
+    color: $redLight;
+}
+// spacing between options
+.optionsDiv {
+    margin:11px 0;
+}
+// slight change to radio button input
+.radButton {
+    width: 15px;
+    height: 15px;
+}
+
+// submit section and results 
+.submitSection {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultError {
+    color: red;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.resultsImg {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+// user answer section
+.userAnswer h2 {
+    display: block;
+    width: 60%;
+    text-align: center;
+    font-size: 4rem;
+    margin: 0px 0px 10px 0px;
+    text-transform: uppercase;
+}
+.userAnswer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 200px auto;
+}
+.userAnswer p {
+    font-size: 1.2rem;
+    width: 70%;
+    margin: 0 auto;
+}
+.userAnswer img {
+    border: none;
+    margin-bottom: 0px;
+}
+
+// submit section 
+.submit {
+    margin-bottom: 100px;
+    padding: 10px;
+    display: block;
+    border: 3px solid #232323;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #232323;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background-color: $background;
+}
+// media queries
