@@ -6,8 +6,6 @@ $(function(event){
     $('a').smoothScroll();
 })
 
-// doc ready
-$(function(){
 // get user input
 catOrDog.runApp = () => {
 $('form').on('submit', function(event) {
