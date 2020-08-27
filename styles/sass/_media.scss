@@ -5,13 +5,19 @@
     }
 }
 @media (max-width:850px) {
-    fieldset {
+    .fieldsetFlex {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 20px;
     }
     .choices {
         width: 100%;
+    }
+
+    .choices a {
+        margin: 10px auto 0px auto;
+        align-self: center;
     }
     img {
         width: 100%;
@@ -19,7 +25,6 @@
         min-width: 200px;
         max-height: 600px;
         min-height: 200px;
-        border: 10px $primary solid;
         border-radius: 5px;
         position: static;
         margin-left: 0;
@@ -34,15 +39,40 @@
         max-width: 400px;
         max-height: 400px;
     }
+    .userAnswer h2 {
+        font-size: 2.2rem;
+    }
+    .wrapper {
+        width: 95%;
+    }
+}
+@media (max-width:500px) {
+    .spanDog {
+        border-top: none;
+        border-bottom: 15px $redLight solid;
+    }
+    h1 {
+        font-size: 4rem;
+        line-height: 5.1rem;
+    }
+    .resultsImg {
+        border: none;
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        max-height: 300px;
+    }
 }
 @media (max-width:400px) {
     footer p {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     main h3 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
     label {
         font-size: 1rem;
     }
 }
+
+// Fix media queries to look proper you fucking camel do you want a job or not

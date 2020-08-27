@@ -11,16 +11,16 @@
 <body>
     <header id="header">
         <div class="wrapper">
-            <h2>what pet should I get</h2>
+            <h2>what pet should I get?</h2>
             <h1><span class="spanCat">Cat</span> or <span class="spanDog">Dog</span></h1>
-            <a href="#formStart">take the quiz</a> <!--takes user to first question-->
+            <a href="#formStart">take the quiz</a>
         </div>
     </header>
 
     <main>
-        <div class="wrapper">
-            <form action="" id="formStart">
-                <fieldset>
+        <div class="wrapper" id="formStart">
+            <form action="">
+                <div role="group" class="fieldsetFlex">
                     <div class="choices">
                         <h3>The heart wants what the heart wants, Dog person or a Cat person?</h3>
                         <div class="optionsDiv">
@@ -46,8 +46,10 @@
                     <div class="imgDiv">
                         <img src="assets/project3ImageQuestionOneImgColour.jpg" alt="a blue cat and red dog beside eachother">
                     </div>
-                </fieldset>
-                <fieldset id="questionTwo">
+                    
+                </div>
+                <div role="group" class="fieldsetFlex" id="questionTwo">
+
                     <div class="choices">
                         <h3>I want a pet that...</h3>
                         <div class="optionsDiv">
@@ -73,9 +75,9 @@
                     <div>
                         <img src="assets/project3ImageQuestionTwoImgColour.jpg" alt="a person thinking about their future pet">
                     </div>
-                </fieldset>
-                <fieldset>
-                    <div class="choices" id="questionThree">
+                </div>
+                <div role="group" class="fieldsetFlex" id="questionThree">
+                    <div class="choices">
                         <h3>How much free time do you have</h3>
                         <div class="optionsDiv">
                             <input type="radio" id="qThreeOptionOne" name="questionThreeOptions" value="3" class="radButton">
@@ -100,9 +102,9 @@
                     <div>
                         <img src="assets/project3ImageQuestionThreeImg.jpg" alt="a dog patiently waiting for their owner to finish working">
                     </div>
-                </fieldset>
-                <fieldset>
-                    <div class="choices" id="questionFour">
+                </div>
+                <div role="group" class="fieldsetFlex" id="questionFour">
+                    <div class="choices">
                         <h3>How much space does your home have?</h3>
                         <div class="optionsDiv">
                             <input type="radio" id="qFourOptionOne" name="questionFourOptions" value="3" class="radButton">
@@ -127,9 +129,9 @@
                     <div>
                         <img src="assets/project3ImageQuestionFourImgColour.jpg" alt="a dog and cat sitting on a couch">
                     </div>
-                </fieldset>
-                <fieldset>
-                    <div class="choices" id="questionFive">
+                </div>
+                <div role="group" class="fieldsetFlex" id="questionFive">
+                    <div class="choices">
                         <h3>How much can you afford to spend on your pet annually?</h3>
                         <div class="optionsDiv">
                             <input type="radio" id="qFiveOptionOne" name="questionFiveOptions" value="3" class="radButton">
@@ -148,16 +150,16 @@
                             <label for="qFiveOptionFour">$2500 + annually</label>
                         </div>
                         <div>
-                            <a href="#resultsButton">next</a>
+                            <a href="#submitSection">next</a>
                         </div>
                     </div>
                     <div>
                         <img src="assets/project3ImageQuestionFiveImgColour.jpg" alt="food bowl and bag of pet food">
                     </div>
-                </fieldset>
-                <div class="submitSection"> 
+                </div>
+                <div class="submitSection" id="submitSection"> 
                     <img class="resultsImg" src="assets/project3ImageResultsSection.jpg" alt="cat and dog chilling side by side waiting for the results of the quiz">
-                    <input class="submit" type="submit" value="see my results" id="resultsButton">
+                    <input class="submit" type="submit" value="see my results">
                     <!-- note to optimize call to action text, current is sample -->
                 </div>
             </form>
