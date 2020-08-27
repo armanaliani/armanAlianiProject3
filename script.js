@@ -4,43 +4,32 @@ const catOrDog = {};
 // smoothscroll
 $(function(event){
     $('a').smoothScroll();
-    event.preventDefault();
 })
 
 // wrap this in doc ready
 
 // get user input
+catOrDog.runApp = () => {
 $('form').on('submit', function(event) {
     event.preventDefault();
     // retrieve value from selected answers
     catOrDog.questionOneAnswer = $(`input[name=questionOneOptions]:checked`).val()
-    console.log(catOrDog.questionOneAnswer);
     catOrDog.questionTwoAnswer = $('input[name=questionTwoOptions]:checked').val()
-    console.log(catOrDog.questionTwoAnswer);
     catOrDog.questionThreeAnswer = $('input[name=questionThreeOptions]:checked').val()
-    console.log(catOrDog.questionThreeAnswer);
     catOrDog.questionFourAnswer = $('input[name=questionFourOptions]:checked').val()
-    console.log(catOrDog.questionFourAnswer);
     catOrDog.questionFiveAnswer = $('input[name=questionFiveOptions]:checked').val()
-    console.log(catOrDog.questionFiveAnswer);
 
 // -------------------------------------------------------
     
     // transfrom string value into real number 
     catOrDog.oneValue = Number(catOrDog.questionOneAnswer);
-    console.log(catOrDog.oneValue);
     catOrDog.twoValue = Number(catOrDog.questionTwoAnswer);
-    console.log(catOrDog.twoValue);
     catOrDog.threeValue = Number(catOrDog.questionThreeAnswer);
-    console.log(catOrDog.threeValue);
     catOrDog.fourValue = Number(catOrDog.questionFourAnswer);
-    console.log(catOrDog.fourValue);
     catOrDog.fiveValue = Number(catOrDog.questionFiveAnswer);
-    console.log(catOrDog.fiveValue);
 
     // calculate users score
     catOrDog.finalResult = (catOrDog.oneValue + catOrDog.twoValue + catOrDog.threeValue + catOrDog.fourValue + catOrDog.fiveValue);
-    console.log(catOrDog.finalResult);
 
     // display user result based on result
     if (catOrDog.finalResult > 0) {
@@ -71,4 +60,11 @@ $('form').on('submit', function(event) {
     }
 
 
+})
+
+};
+
+// doc. ready
+$(function () {
+    catOrDog.runApp();
 })
