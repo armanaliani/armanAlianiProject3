@@ -6,8 +6,8 @@ $(function(event){
     $('a').smoothScroll();
 })
 
-// wrap this in doc ready
-
+// doc ready
+$(function(){
 // get user input
 catOrDog.runApp = () => {
 $('form').on('submit', function(event) {
@@ -55,8 +55,6 @@ $('form').on('submit', function(event) {
         </div>
         `);
         window.location = "#answer";
-        // <a href="#formStart">Take it again</a>
-        // add above code to html on submit, configure to reset quiz when clicked
     }
 
 
@@ -68,3 +66,4 @@ $('form').on('submit', function(event) {
 $(function () {
     catOrDog.runApp();
 })
+
