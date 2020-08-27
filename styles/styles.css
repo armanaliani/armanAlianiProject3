@@ -202,15 +202,6 @@ template {
   display: none;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: '';
-  clear: both;
-  height: 0;
-}
-
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -221,7 +212,7 @@ html {
           box-sizing: inherit;
 }
 
-.sr-only {
+.srOnly {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -237,7 +228,7 @@ html {
 
 .wrapper {
   width: 80%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -301,27 +292,42 @@ header h2 {
   font-size: 1.2rem;
 }
 
-fieldset {
+.fieldsetFlex {
   border: 10px #232323 solid;
   border-radius: 5px;
   margin: 200px auto;
+  width: 100%;
   padding: 50px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .choices {
-  width: 55%;
+  width: 50%;
+  margin: 0;
+  display: inline-block;
+}
+
+.imgDiv {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 img {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   min-width: 200px;
   max-height: 400px;
   min-height: 200px;
-  border: 10px #232323 solid;
   border-radius: 5px;
   position: relative;
   right: 0;
@@ -447,7 +453,7 @@ footer p {
 }
 
 @media (max-width: 850px) {
-  fieldset {
+  .fieldsetFlex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -458,9 +464,16 @@ footer p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 20px;
   }
   .choices {
     width: 100%;
+  }
+  .choices a {
+    margin: 10px auto 0px auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   img {
     width: 100%;
@@ -468,7 +481,6 @@ footer p {
     min-width: 200px;
     max-height: 600px;
     min-height: 200px;
-    border: 10px #232323 solid;
     border-radius: 5px;
     position: static;
     margin-left: 0;
@@ -483,14 +495,20 @@ footer p {
     max-width: 400px;
     max-height: 400px;
   }
+  .userAnswer h2 {
+    font-size: 2.2rem;
+  }
+  .wrapper {
+    width: 95%;
+  }
 }
 
 @media (max-width: 400px) {
   footer p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   main h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   label {
     font-size: 1rem;
