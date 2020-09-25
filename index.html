@@ -17,12 +17,14 @@
         </div>
     </header>
 
+<!-- NOTE*** flexbox does not work on fieldsets on chrome, therefore despite better SEO practice, fieldsets have been changed to fivs -->
+
     <main>
         <div class="wrapper" id="formStart">
             <form action="">
                 <div role="group" class="fieldsetFlex">
                     <div class="choices">
-                        <h3>How neat are you?</h3>
+                        <h2>How neat are you?</h2>
                         <div class="optionsDiv">
                             <input type="radio" name="questionOneOptions" value="3" id="qOneOptionOne" class="radButton">
                             <label  for="qOneOptionOne">I don't enjoy cleaning</label>
@@ -46,12 +48,11 @@
                     <div class="imgDiv">
                         <img src="assets/project3ImageQuestionOneImgColour.jpg" alt="a blue cat and red dog beside eachother">
                     </div>
-                    
                 </div>
-                <div role="group" class="fieldsetFlex" id="questionTwo">
 
+                <div role="group" class="fieldsetFlex" id="questionTwo">
                     <div class="choices">
-                        <h3>I want a pet that...</h3>
+                        <h2>I want a pet that...</h2>
                         <div class="optionsDiv">
                             <input type="radio" name="questionTwoOptions" value="3" id="qTwoOptionOne" class="radButton">
                             <label for="qTwoOptionOne">Is clean, calm, quiet, and independant</label>
@@ -76,9 +77,10 @@
                         <img src="assets/project3ImageQuestionTwoImgColour.jpg" alt="a person thinking about their future pet">
                     </div>
                 </div>
+
                 <div role="group" class="fieldsetFlex" id="questionThree">
                     <div class="choices">
-                        <h3>How much free time do you have</h3>
+                        <h2>How much free time do you have</h2>
                         <div class="optionsDiv">
                             <input type="radio" id="qThreeOptionOne" name="questionThreeOptions" value="3" class="radButton">
                             <label for="qThreeOptionOne">Extremely busy, minimal free time</label>
@@ -103,9 +105,10 @@
                         <img src="assets/project3ImageQuestionThreeImg.jpg" alt="a dog patiently waiting for their owner to finish working">
                     </div>
                 </div>
+
                 <div role="group" class="fieldsetFlex" id="questionFour">
                     <div class="choices">
-                        <h3>How much space does your home have?</h3>
+                        <h2>How much space does your home have?</h2>
                         <div class="optionsDiv">
                             <input type="radio" id="qFourOptionOne" name="questionFourOptions" value="3" class="radButton">
                             <label for="qFourOptionOne">smaller condo/apartment under 700sqft</label>
@@ -130,9 +133,10 @@
                         <img src="assets/project3ImageQuestionFourImgColour.jpg" alt="a dog and cat sitting on a couch">
                     </div>
                 </div>
+
                 <div role="group" class="fieldsetFlex" id="questionFive">
                     <div class="choices">
-                        <h3>How much can you afford to spend on your pet annually?</h3>
+                        <h2>How much can you afford to spend on your pet annually?</h2>
                         <div class="optionsDiv">
                             <input type="radio" id="qFiveOptionOne" name="questionFiveOptions" value="3" class="radButton">
                             <label for="qFiveOptionOne">$750 + annually</label>
@@ -157,6 +161,7 @@
                         <img src="assets/project3ImageQuestionFiveImgColour.jpg" alt="food bowl and bag of pet food">
                     </div>
                 </div>
+
                 <div class="submitSection" id="submitSection"> 
                     <img class="resultsImg" src="assets/project3ImageResultsSection.jpg" alt="cat and dog chilling side by side waiting for the results of the quiz">
                     <input class="submit" type="submit" value="see my results">
