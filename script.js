@@ -10,25 +10,23 @@ $(function(event){
 catOrDog.runApp = () => {
 $('form').on('submit', function(event) {
     event.preventDefault();
-    // retrieve value from selected answers
-    catOrDog.questionOneAnswer = $(`input[name=questionOneOptions]:checked`).val()
-    catOrDog.questionTwoAnswer = $('input[name=questionTwoOptions]:checked').val()
-    catOrDog.questionThreeAnswer = $('input[name=questionThreeOptions]:checked').val()
-    catOrDog.questionFourAnswer = $('input[name=questionFourOptions]:checked').val()
-    catOrDog.questionFiveAnswer = $('input[name=questionFiveOptions]:checked').val()
+    // select all checked input and put them in an array
+    catOrDog.test = document.querySelectorAll(`input:checked`);
+    const answersArray = $.makeArray(catOrDog.test);
 
-// -------------------------------------------------------
+    // get the value of the checked inputs
+    catOrDog.mapped = $.map(answersArray, function(question) {
+        return (question.defaultValue);
+    } )
     
-    // transfrom string value into real number 
-    catOrDog.oneValue = Number(catOrDog.questionOneAnswer);
-    catOrDog.twoValue = Number(catOrDog.questionTwoAnswer);
-    catOrDog.threeValue = Number(catOrDog.questionThreeAnswer);
-    catOrDog.fourValue = Number(catOrDog.questionFourAnswer);
-    catOrDog.fiveValue = Number(catOrDog.questionFiveAnswer);
+    // change array string values to integers
+    catOrDog.makeNumber = catOrDog.mapped.map(Number);
 
-    // calculate users score
-    catOrDog.finalResult = (catOrDog.oneValue + catOrDog.twoValue + catOrDog.threeValue + catOrDog.fourValue + catOrDog.fiveValue);
-
+    // add array values for final result
+    catOrDog.finalResult = catOrDog.makeNumber.reduce(function (a,b) {
+        return a + b;
+    });
+// -------------------------------------------------
     // display user result based on result
     if (catOrDog.finalResult > 0) {
         // display cat result
@@ -40,10 +38,12 @@ $('form').on('submit', function(event) {
         </div>
         `);
         window.location = "#answer";
-    } else if (catOrDog.finalResult != catOrDog.oneValue + catOrDog.twoValue + catOrDog.threeValue + catOrDog.fourValue + catOrDog.fiveValue) {
+    } 
+    else if (catOrDog.makeNumber.length != 5) {
         $('.result').html(`<p class="resultError">Please fill out all the questions</p>`);
         window.location = "#answer";
-    } else {
+    } 
+    else {
         // display dog result
         $('.result').html(`
         <div class="userAnswer">
@@ -54,14 +54,10 @@ $('form').on('submit', function(event) {
         `);
         window.location = "#answer";
     }
-
-
 })
-
 };
 
 // doc. ready
 $(function () {
     catOrDog.runApp();
 })
-
