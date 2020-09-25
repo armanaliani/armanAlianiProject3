@@ -380,7 +380,7 @@ input:focus {
 .resultsImg {
   border: none;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .userAnswer h2 {
