@@ -324,12 +324,8 @@ header h2 {
 
 img {
   width: 100%;
-  height: 100%;
-  max-width: 500px;
-  min-width: 200px;
+  height: auto;
   border-radius: 5px;
-  position: relative;
-  right: 0;
 }
 
 fieldset img {
@@ -379,7 +375,9 @@ input:focus {
 
 .resultsImg {
   border: none;
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: auto;
 }
 
@@ -414,6 +412,10 @@ input:focus {
 
 .userAnswer img {
   border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
   margin-bottom: 0px;
 }
 
@@ -469,7 +471,11 @@ footer p {
     padding: 20px;
   }
   .choices {
-    width: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    margin: 0 auto;
   }
   .choices a {
     margin: 10px auto 0px auto;
@@ -477,21 +483,8 @@ footer p {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  img {
-    width: 100%;
-    max-width: 600px;
-    min-width: 200px;
-    border-radius: 5px;
-    position: static;
-    margin-left: 0;
-  }
   a {
     margin: 25px auto;
-  }
-  .resultsImg {
-    border: none;
-    width: 100%;
-    max-width: 400px;
   }
   .userAnswer h2 {
     font-size: 2.2rem;
@@ -508,12 +501,7 @@ footer p {
   }
   h1 {
     font-size: 4rem;
-    line-height: 5.1rem;
-  }
-  .resultsImg {
-    border: none;
-    width: 100%;
-    max-width: 300px;
+    line-height: 5.4rem;
   }
 }
 
