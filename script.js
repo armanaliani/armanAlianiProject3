@@ -12,6 +12,10 @@ $('form').on('submit', function(event) {
     event.preventDefault();
     // select all checked input and put them in an array
     catOrDog.test = document.querySelectorAll(`input:checked`);
+    if (catOrDog.test.length === 0) {
+        $('.result').html(`<p class="resultError">Please fill out all the questions</p>`);
+        window.location = "#answer";
+    }
     const answersArray = $.makeArray(catOrDog.test);
 
     // get the value of the checked inputs
@@ -28,7 +32,11 @@ $('form').on('submit', function(event) {
     });
 // -------------------------------------------------
     // display user result based on result
-    if (catOrDog.finalResult > 0) {
+    // checks that all questions are answered
+    if (catOrDog.makeNumber.length != 5) {
+        $('.result').html(`<p class="resultError">Please fill out all the questions</p>`);
+        window.location = "#answer";
+    } else if (catOrDog.finalResult > 0) {
         // display cat result
         $('.result').html(`
         <div class="userAnswer">
@@ -38,12 +46,7 @@ $('form').on('submit', function(event) {
         </div>
         `);
         window.location = "#answer";
-    } 
-    else if (catOrDog.makeNumber.length != 5) {
-        $('.result').html(`<p class="resultError">Please fill out all the questions</p>`);
-        window.location = "#answer";
-    } 
-    else {
+    } else {
         // display dog result
         $('.result').html(`
         <div class="userAnswer">
